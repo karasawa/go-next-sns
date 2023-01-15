@@ -1,0 +1,14 @@
+{
+	"name": "backend",
+	"dockerComposeFile": "../docker-compose.yml",
+	"workspaceFolder": "/backend",
+	"service": "backend",
+	"runServices": [
+		"backend"
+	],
+	"extensions": [
+        "esbenp.prettier-vscode",
+		"golang.Go"
+	],
+	"shutdownAction": "stopCompose"
+}
