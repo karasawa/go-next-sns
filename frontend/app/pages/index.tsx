@@ -6,7 +6,7 @@ export default function Home() {
 
   useEffect(() => {
     const getUsers = async() => {
-      await fetch("http://127.0.0.1:8080/user/get")
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/get`)
       .then(res => res.json())
       .then(data => {
           console.log(data)

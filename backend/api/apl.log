@@ -52,3 +52,52 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN] 2023/01/15 - 14:55:20 | 200 |     162.397µs |      172.21.0.1 | GET      "/user/get"
 [GIN] 2023/01/15 - 14:55:33 | 200 |      29.868µs |      172.21.0.1 | GET      "/user/get"
 [GIN] 2023/01/15 - 14:55:33 | 200 |      25.994µs |      172.21.0.1 | GET      "/user/get"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /user/get                 --> github.com/karasawa/go-next-sns.git/controllers.GetUser (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/15 - 15:02:29 | 200 |      69.671µs |      172.21.0.1 | GET      "/user/get"
+[GIN] 2023/01/15 - 15:02:29 | 200 |       34.02µs |      172.21.0.1 | GET      "/user/get"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /user/get                 --> github.com/karasawa/go-next-sns.git/controllers.GetUser (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/15 - 23:38:55 | 200 |     322.091µs |      172.21.0.1 | GET      "/user/get"
+[GIN] 2023/01/15 - 23:38:55 | 200 |      70.052µs |      172.21.0.1 | GET      "/user/get"
+[GIN] 2023/01/15 - 23:39:07 | 200 |      28.301µs |      172.21.0.1 | GET      "/user/get"
+[GIN] 2023/01/15 - 23:39:07 | 200 |      28.764µs |      172.21.0.1 | GET      "/user/get"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /signup                   --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /user/get                 --> github.com/karasawa/go-next-sns.git/controllers.GetUser (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/15 - 23:52:07 | 200 |   58.461624ms |      172.21.0.1 | POST     "/signup"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /signup                   --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /user/get                 --> github.com/karasawa/go-next-sns.git/controllers.GetUser (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080

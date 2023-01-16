@@ -1,3 +1,3 @@
 FROM golang:latest
 
-WORKDIR /golang
+WORKDIR /backend

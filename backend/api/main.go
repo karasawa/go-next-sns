@@ -43,6 +43,7 @@ func main() {
 		MaxAge: 24 * time.Hour,
 	  }))
 	
+	r.POST("/signup", controllers.SignUp)
 	user := r.Group("/user")
 	{
 		user.GET("/get", controllers.GetUser)
