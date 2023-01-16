@@ -44,6 +44,7 @@ func main() {
 	  }))
 	
 	r.POST("/signup", controllers.SignUp)
+	r.POST("/signin", controllers.SignIn)
 	user := r.Group("/user")
 	{
 		user.GET("/get", controllers.GetUser)
