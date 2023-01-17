@@ -7,6 +7,7 @@ import (
 
 type Config struct {
 	Db Db
+	Jwt Jwt
 }
 
 type Db struct {
@@ -15,6 +16,10 @@ type Db struct {
 	Password string
 	DbName string
 	Port string
+}
+
+type Jwt struct {
+	SecretKey string
 }
 
 func Load() (*Config, error) {

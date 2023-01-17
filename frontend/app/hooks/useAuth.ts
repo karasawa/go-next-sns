@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import Cookie from 'universal-cookie'
 
-export const useAuth = (email: string, password: string, setOk: any) => {
+const cookie = new Cookie()
+
+export const useAuth = (email: string, password: string) => {
   const signup = async () => {
-    await setOk(true)
-    await fetch(new URL(`${process.env.NEXT_PUBLIC_API_URL}/signup`), {
+    await fetch(new URL(`${process.env.NEXT_PUBLIC_API_URL}/user/signup`), {
       method: 'POST',
       body: JSON.stringify({ email: email, password: password }),
       headers: {
@@ -13,13 +14,11 @@ export const useAuth = (email: string, password: string, setOk: any) => {
       .then((res) => res.json())
       .catch((err) => {
         console.log(err)
-        setOk(false)
       })
       .then((data) => console.log(data))
   }
   const signin = async () => {
-    await setOk(true)
-    await fetch(new URL(`${process.env.NEXT_PUBLIC_API_URL}/signin`), {
+    await fetch(new URL(`${process.env.NEXT_PUBLIC_API_URL}/token`), {
       method: 'POST',
       body: JSON.stringify({ email: email, password: password }),
       headers: {
@@ -29,15 +28,11 @@ export const useAuth = (email: string, password: string, setOk: any) => {
       .then((res) => res.json())
       .catch((err) => {
         console.log(err)
-        setOk(false)
       })
       .then((data) => {
-        if (data.errMes !== '') {
-          console.log(data.errMes)
-          setOk(false)
-          return
-        }
         console.log(data)
+        const options = { path: '/' }
+        cookie.set('access_token', data.token, options)
       })
   }
   return { signup, signin }

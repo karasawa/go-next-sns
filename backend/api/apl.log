@@ -367,3 +367,38 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :8080
 [GIN] 2023/01/16 - 02:22:04 | 200 | 10.848208902s |      172.21.0.1 | POST     "/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /signup                   --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] POST   /signin                   --> github.com/karasawa/go-next-sns.git/controllers.SignIn (4 handlers)
+[GIN-debug] GET    /user/get                 --> github.com/karasawa/go-next-sns.git/controllers.GetUser (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/16 - 02:23:23 | 200 |  102.215096ms |      172.21.0.1 | POST     "/signin"
+[GIN] 2023/01/16 - 02:23:37 | 200 |   50.161396ms |      172.21.0.1 | POST     "/signin"
+[GIN] 2023/01/16 - 05:14:04 | 204 |      57.146µs |      172.21.0.1 | OPTIONS  "/signin"
+[GIN] 2023/01/16 - 05:14:04 | 200 |   56.455589ms |      172.21.0.1 | POST     "/signin"
+[GIN] 2023/01/16 - 05:14:16 | 200 |   58.792949ms |      172.21.0.1 | POST     "/signin"
+[GIN] 2023/01/16 - 05:15:04 | 200 |   48.370137ms |      172.21.0.1 | POST     "/signin"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/token                --> github.com/karasawa/go-next-sns.git/controllers.GenerateToken (4 handlers)
+[GIN-debug] POST   /api/user/signup          --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /api/secured/ping         --> github.com/karasawa/go-next-sns.git/controllers.Ping (5 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/17 - 03:47:21 | 404 |       2.062µs |      172.21.0.1 | POST     "/api"
+[GIN] 2023/01/17 - 03:47:41 | 404 |       1.382µs |      172.21.0.1 | GET      "/api/ping"
+[GIN] 2023/01/17 - 03:49:20 | 400 |   55.422086ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/17 - 03:50:24 | 500 |   53.758393ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/17 - 03:51:53 | 401 |   54.444927ms |      172.21.0.1 | POST     "/api/token"

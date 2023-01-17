@@ -4,3 +4,6 @@ db:
   password: "password"
   dbname: "postgres"
   port: "5432"
+
+jwt:
+  secretkey: "supersecretkey"

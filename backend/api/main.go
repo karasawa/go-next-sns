@@ -3,11 +3,11 @@ package main
 import (
 	"os"
 	"io"
-	"time"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/karasawa/go-next-sns.git/models"
 	"github.com/karasawa/go-next-sns.git/controllers"
+	"github.com/karasawa/go-next-sns.git/middlewares"
 )
 
 func init() {
@@ -18,9 +18,12 @@ func main() {
 	f, _ := os.OpenFile("apl.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	defer f.Close()
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+	r := initRouter()
+	r.Run(":8080")
+}
 
+func initRouter() *gin.Engine {
 	r := gin.Default()
-
 	r.Use(cors.New(cors.Config{
 		AllowMethods: []string{
 			"POST",
@@ -40,14 +43,15 @@ func main() {
 		AllowOrigins: []string{
 			"*",
 		},
-		MaxAge: 24 * time.Hour,
-	  }))
-	
-	r.POST("/signup", controllers.SignUp)
-	r.POST("/signin", controllers.SignIn)
-	user := r.Group("/user")
+	}))
+	api := r.Group("/api")
 	{
-		user.GET("/get", controllers.GetUser)
+		api.POST("/token", controllers.GenerateToken)
+		api.POST("/user/signup", controllers.SignUp)
+		secured := api.Group("/secured").Use(middlewares.Auth())
+		{
+			secured.GET("/ping", controllers.Ping)
+		}
 	}
-	r.Run(":8080")
+	return r
 }

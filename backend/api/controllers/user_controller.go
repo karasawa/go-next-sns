@@ -16,12 +16,23 @@ func SignUp(ctx *gin.Context) {
 	user := models.User{}
 	if err := ctx.ShouldBindJSON(&user); err != nil {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		ctx.Abort()
+		return
+	}
+
+	if err := user.HashPassword(user.Password); err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		ctx.Abort()
+		return
 	}
 
 	result := db.Create(&user)
 	if result.Error != nil {
-		log.Fatalln(result.Error)
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": result.Error})
+		ctx.Abort()
+		return
 	}
+
 	ctx.JSON(http.StatusOK, gin.H{
 		"user": user,
 	})
@@ -48,8 +59,13 @@ func SignIn(ctx *gin.Context) {
 	})
 }
 
-func GetUser(ctx *gin.Context) {
+func User(ctx *gin.Context) {
+	head := ctx.Request.Header["Authrization"]
 	ctx.JSON(http.StatusOK, gin.H{
-		"message": "pong",
+		"head": head,
 	})
+}
+
+func Ping(context *gin.Context) {
+	context.JSON(http.StatusOK, gin.H{"message": "pong"})
 }
