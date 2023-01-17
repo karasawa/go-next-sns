@@ -53,5 +53,6 @@ func initRouter() *gin.Engine {
 			secured.GET("/ping", controllers.Ping)
 		}
 	}
+	r.POST("/chat/create", controllers.SendChat)
 	return r
 }

@@ -17,6 +17,9 @@ export const AuthForm = () => {
     setPassword('')
     if (isSignIn) {
       await signin()
+      if (cookie.get('access_token') !== 'undefined') {
+        router.push('/home')
+      }
     } else {
       await signup()
       setIsSignIn(true)
@@ -51,10 +54,9 @@ export const AuthForm = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={auth}>{isSignIn ? 'ログイン' : '新規登録'}</button>
-      <h5 onClick={() => setIsSignIn(!isSignIn)}>
+      <h5 className="text-4xl" onClick={() => setIsSignIn(!isSignIn)}>
         {isSignIn ? 'アカウントを新規登録する' : 'ログイン画面へ戻る'}
       </h5>
-
       <button onClick={clickHandle}>ping</button>
     </div>
   )

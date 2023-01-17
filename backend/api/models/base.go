@@ -19,6 +19,7 @@ func DbInit() *gorm.DB {
 	}
 
 	db.AutoMigrate(&User{})
+	db.AutoMigrate(&Chat{})
 
 	return db
 }
