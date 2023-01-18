@@ -29,3 +29,19 @@ func SendChat(ctx *gin.Context) {
 	})
 
 }
+
+func GetChats(ctx *gin.Context) {
+	db := models.DbInit()
+
+	chats := []models.Chat{}
+	result := db.Find(&chats)
+	if result.Error != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": result.Error})
+		ctx.Abort()
+		return
+	}
+
+	ctx.JSON(http.StatusOK, gin.H{
+		"chats": chats,
+	})
+}

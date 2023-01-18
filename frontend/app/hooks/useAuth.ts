@@ -1,5 +1,4 @@
 import Cookie from 'universal-cookie'
-import { useRouter } from 'next/router'
 
 const cookie = new Cookie()
 
@@ -29,7 +28,6 @@ export const useAuth = (email: string, password: string) => {
       .then((res) => res.json())
       .catch((err) => {
         throw new Error(err)
-        // console.log(err)
       })
       .then((data) => {
         console.log(data)

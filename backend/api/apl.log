@@ -534,3 +534,292 @@ Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-
 [GIN] 2023/01/17 - 17:04:36 | 500 |  104.908445ms |      172.21.0.1 | POST     "/api/token"
 [GIN] 2023/01/17 - 17:04:44 | 204 |       8.189µs |      172.21.0.1 | OPTIONS  "/api/token"
 [GIN] 2023/01/17 - 17:04:44 | 200 |  125.214076ms |      172.21.0.1 | POST     "/api/token"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/token                --> github.com/karasawa/go-next-sns.git/controllers.GenerateToken (4 handlers)
+[GIN-debug] POST   /api/user/signup          --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /api/secured/ping         --> github.com/karasawa/go-next-sns.git/controllers.Ping (5 handlers)
+[GIN-debug] POST   /chat/create              --> github.com/karasawa/go-next-sns.git/controllers.SendChat (4 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/17 - 18:00:38 | 200 |  169.262736ms |      172.21.0.1 | POST     "/chat/create"
+[GIN] 2023/01/18 - 00:33:44 | 204 |    2.713501ms |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 00:33:44 | 200 |  276.117867ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 01:20:50 | 204 |    1.349267ms |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 01:20:50 | 500 |  275.641431ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 01:21:00 | 204 |     532.882µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 01:21:00 | 200 |  247.153749ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 01:24:10 | 204 |      92.619µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 01:24:11 | 200 |  250.538676ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 01:43:31 | 204 |    1.115156ms |      172.21.0.1 | OPTIONS  "/api/user/signup"
+[GIN] 2023/01/18 - 01:43:31 | 200 |  332.711078ms |      172.21.0.1 | POST     "/api/user/signup"
+[GIN] 2023/01/18 - 01:43:51 | 204 |      10.243µs |      172.21.0.1 | OPTIONS  "/api/user/signup"
+[GIN] 2023/01/18 - 01:43:51 | 200 |  231.785253ms |      172.21.0.1 | POST     "/api/user/signup"
+[GIN] 2023/01/18 - 01:45:45 | 204 |     109.857µs |      172.21.0.1 | OPTIONS  "/api/user/signup"
+[GIN] 2023/01/18 - 01:45:45 | 200 |  260.825301ms |      172.21.0.1 | POST     "/api/user/signup"
+[GIN] 2023/01/18 - 01:45:52 | 204 |      12.379µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 01:45:52 | 404 |       4.239µs |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/token                --> github.com/karasawa/go-next-sns.git/controllers.GenerateToken (4 handlers)
+[GIN-debug] POST   /api/user/signup          --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /api/secured/ping         --> github.com/karasawa/go-next-sns.git/controllers.Ping (5 handlers)
+[GIN-debug] POST   /api/secured/chat/create  --> github.com/karasawa/go-next-sns.git/controllers.SendChat (5 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/18 - 01:47:02 | 204 |       79.67µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 01:47:02 | 200 |  176.682158ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 01:47:14 | 204 |      15.647µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 01:47:14 | 200 |   79.752562ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/token                --> github.com/karasawa/go-next-sns.git/controllers.GenerateToken (4 handlers)
+[GIN-debug] POST   /api/user/signup          --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /api/secured/ping         --> github.com/karasawa/go-next-sns.git/controllers.Ping (5 handlers)
+[GIN-debug] POST   /api/secured/chat/create  --> github.com/karasawa/go-next-sns.git/controllers.SendChat (5 handlers)
+[GIN-debug] POST   /api/secured/chat/get/messages --> github.com/karasawa/go-next-sns.git/controllers.SendChat (5 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/token                --> github.com/karasawa/go-next-sns.git/controllers.GenerateToken (4 handlers)
+[GIN-debug] POST   /api/user/signup          --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /api/secured/ping         --> github.com/karasawa/go-next-sns.git/controllers.Ping (5 handlers)
+[GIN-debug] POST   /api/secured/chat/create  --> github.com/karasawa/go-next-sns.git/controllers.SendChat (5 handlers)
+[GIN-debug] GET    /api/secured/chat/get/messages --> github.com/karasawa/go-next-sns.git/controllers.SendChat (5 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/18 - 02:10:18 | 204 |     103.784µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:10:18 | 204 |      51.443µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:10:18 | 400 |  115.641075ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:10:18 | 400 |  171.592581ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:11:15 | 204 |      384.77µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 02:11:16 | 200 |  414.242406ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 02:11:16 | 204 |      10.383µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:11:16 | 204 |      62.826µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:11:16 | 400 |    335.6892ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:11:17 | 400 |  525.140089ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /api/token                --> github.com/karasawa/go-next-sns.git/controllers.GenerateToken (4 handlers)
+[GIN-debug] POST   /api/user/signup          --> github.com/karasawa/go-next-sns.git/controllers.SignUp (4 handlers)
+[GIN-debug] GET    /api/secured/ping         --> github.com/karasawa/go-next-sns.git/controllers.Ping (5 handlers)
+[GIN-debug] POST   /api/secured/chat/create  --> github.com/karasawa/go-next-sns.git/controllers.SendChat (5 handlers)
+[GIN-debug] GET    /api/secured/chat/get/messages --> github.com/karasawa/go-next-sns.git/controllers.GetChats (5 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/01/18 - 02:13:38 | 204 |     128.473µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 02:13:39 | 200 |  221.020185ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 02:13:39 | 204 |      11.985µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:13:39 | 204 |      57.857µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:13:39 | 200 |  191.008853ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:13:39 | 200 |    167.8503ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:14:24 | 204 |      31.487µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:14:25 | 200 |  134.882749ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:15:31 | 204 |      11.622µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:15:31 | 200 |  138.021714ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:15:38 | 204 |       9.049µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:15:38 | 200 |  141.457252ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:15:48 | 204 |      14.096µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:15:48 | 200 |  334.165402ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:17:39 | 204 |      14.858µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:17:39 | 200 |  103.057337ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:02 | 204 |    1.174565ms |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:02 | 200 |  162.195723ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:06 | 200 |  227.574009ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:24 | 204 |       9.659µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 02:28:24 | 200 |  172.417334ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 02:28:25 | 204 |      12.218µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:25 | 200 |  103.490458ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:27 | 200 |   125.69865ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:28:44 | 204 |       15.96µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:28:44 | 200 |  134.083325ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:30:01 | 204 |      55.107µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:30:01 | 200 |  371.213613ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:32:57 | 204 |      84.991µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:32:57 | 200 |  173.643285ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:06 | 204 |      77.674µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:06 | 200 |  119.805142ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:09 | 200 |  127.348998ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:12 | 204 |      12.245µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:12 | 200 |   134.72087ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:15 | 200 |  168.838399ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:24 | 204 |      63.426µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:24 | 200 |  187.553551ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:29 | 204 |      50.742µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:29 | 200 |  200.871898ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:30 | 204 |      49.745µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:33:30 | 200 |  120.087809ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:33:37 | 204 |      12.238µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:37 | 200 |   168.36694ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:44 | 204 |       31.49µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:45 | 200 |   134.56213ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:52 | 204 |       49.68µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:52 | 200 |  130.831275ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:59 | 204 |      35.678µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:33:59 | 200 |  458.109556ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:06 | 204 |      10.212µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:06 | 200 |   83.463573ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:13 | 204 |       37.18µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:14 | 200 |  128.177644ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:21 | 204 |       41.29µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:21 | 200 |  137.021841ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:28 | 204 |      11.254µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:34:28 | 200 |   85.701105ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:18 | 204 |      56.869µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:18 | 200 |  141.611866ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:18 | 200 |  137.938861ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:18 | 200 |   121.17216ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:30 | 204 |      35.583µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:30 | 204 |      52.296µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:31 | 200 |  135.217361ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:31 | 200 |  123.616673ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:44 | 204 |      10.871µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:44 | 204 |      65.698µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:45 | 200 |  116.081578ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:45 | 200 |  220.994388ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:58 | 204 |      13.208µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:58 | 204 |      11.118µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:58 | 200 |  124.699442ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:41:58 | 200 |  109.288447ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:42:12 | 204 |      15.243µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:42:12 | 200 |  152.331344ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:42:12 | 204 |       12.56µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:42:12 | 200 |  166.171281ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:19 | 204 |      13.994µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:19 | 204 |       7.895µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:19 | 200 |  124.500802ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:19 | 200 |  150.792915ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:32 | 204 |      14.917µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:32 | 200 |  140.274737ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:44 | 204 |       9.981µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:45:44 | 200 |  104.413086ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:46:56 | 204 |      13.013µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:46:56 | 200 |  199.895285ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:47:21 | 204 |      11.314µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:47:22 | 200 |  124.956488ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:47:26 | 204 |      15.017µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:47:26 | 200 |  137.127221ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:47:26 | 200 |  135.520191ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:33 | 204 |       8.621µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:33 | 200 |  102.467221ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:33 | 204 |      13.455µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:48:33 | 200 |  300.905469ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:48:34 | 200 |  140.572719ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:49 | 204 |      14.573µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:48:49 | 200 |  159.683769ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:48:49 | 204 |      12.039µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:49 | 200 |   244.58804ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:56 | 204 |        8.95µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:48:57 | 200 |  123.957486ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:49:03 | 204 |      17.065µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:49:03 | 200 |   186.12095ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:49:03 | 204 |       12.85µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:49:03 | 200 |  145.779179ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:49:09 | 204 |       9.488µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:49:09 | 200 |  108.948604ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:49:21 | 204 |      18.444µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:49:22 | 200 |  126.763642ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:01 | 204 |      13.547µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:01 | 200 |  201.097423ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:01 | 200 |  120.658563ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:13 | 204 |      12.312µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:13 | 204 |       9.925µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:13 | 200 |   110.09579ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:13 | 200 |  160.751704ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:59 | 204 |      12.281µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:59 | 200 |  119.707982ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:51:59 | 200 |   182.14645ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:55:39 | 204 |      18.024µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 02:55:39 | 200 |  219.862975ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 02:55:46 | 204 |      11.237µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:55:46 | 204 |       8.179µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:55:46 | 200 |  110.282895ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:55:46 | 200 |  102.060673ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:56:46 | 204 |      14.571µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:56:46 | 200 |  112.529452ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:57:10 | 204 |        8.32µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:57:11 | 200 |  126.083355ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:57:24 | 204 |       7.396µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:57:24 | 200 |   94.034945ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 02:57:24 | 204 |       6.984µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:57:24 | 200 |   78.172551ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:58:24 | 204 |      16.615µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:58:24 | 204 |       9.933µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:58:24 | 200 |  127.263378ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:58:24 | 200 |  121.060093ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:58:37 | 204 |     193.252µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 02:58:37 | 200 |  154.024641ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:03:33 | 204 |      74.131µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:03:33 | 200 |  109.414176ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:03:58 | 204 |      44.488µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:03:58 | 200 |  110.340923ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:07:35 | 204 |      47.053µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:07:35 | 200 |  101.301178ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:09:35 | 204 |      70.985µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:09:35 | 401 |   35.598486ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:09:35 | 401 |   67.008692ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:10:02 | 204 |     124.406µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 03:10:03 | 200 |  644.420007ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 03:10:05 | 204 |      31.695µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:10:05 | 204 |      46.253µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:10:05 | 200 |  107.854318ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:10:06 | 200 |  131.420657ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:11:06 | 204 |    1.427269ms |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:11:06 | 204 |      57.271µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:11:06 | 200 |  164.001048ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:11:06 | 200 |   245.37989ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:12:20 | 204 |      38.341µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:12:20 | 200 |   94.932453ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:12:20 | 204 |       6.308µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:12:20 | 200 |   91.594497ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:12:28 | 204 |       9.375µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:12:29 | 200 |  145.694882ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:12:29 | 204 |       10.61µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:12:29 | 200 |  148.309731ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:19:00 | 204 |      53.734µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:19:00 | 200 |  144.445789ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:19:00 | 204 |      10.268µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:19:00 | 200 |  127.835692ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:19:57 | 204 |      12.824µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:19:57 | 200 |  209.044934ms |      172.21.0.1 | POST     "/api/secured/chat/create"
+[GIN] 2023/01/18 - 03:19:57 | 204 |       8.494µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:19:57 | 200 |  152.574012ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:21:26 | 204 |      14.423µs |      172.21.0.1 | OPTIONS  "/api/token"
+[GIN] 2023/01/18 - 03:21:27 | 200 |  383.887816ms |      172.21.0.1 | POST     "/api/token"
+[GIN] 2023/01/18 - 03:21:27 | 204 |      14.505µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:21:27 | 204 |      18.161µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:21:27 | 200 |  244.306822ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:21:27 | 200 |   294.52891ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:24:44 | 204 |      18.705µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:24:44 | 204 |      12.302µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:24:45 | 200 |  117.342044ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:24:45 | 200 |  129.273375ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:25:33 | 204 |      10.423µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:25:33 | 200 |   110.75962ms |      172.21.0.1 | GET      "/api/secured/chat/get/messages"
+[GIN] 2023/01/18 - 03:26:25 | 204 |      12.656µs |      172.21.0.1 | OPTIONS  "/api/secured/chat/get/messages"

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useAuth } from '../../hooks/useAuth'
 import { useRouter } from 'next/router'
 import Cookie from 'universal-cookie'
+import useStore from '../../store/index'
 
 const cookie = new Cookie()
 
@@ -10,6 +11,8 @@ export const AuthForm = () => {
   const [password, setPassword] = useState('')
   const [isSignIn, setIsSignIn] = useState(true)
   const router = useRouter()
+  const user = useStore((state) => state.user)
+  const updateUser = useStore((state) => state.updateUser)
 
   const auth = async () => {
     const { signup, signin } = useAuth(email, password)
@@ -18,6 +21,7 @@ export const AuthForm = () => {
     if (isSignIn) {
       await signin()
       if (cookie.get('access_token') !== 'undefined') {
+        updateUser({ ...user, username: email })
         router.push('/home')
       }
     } else {

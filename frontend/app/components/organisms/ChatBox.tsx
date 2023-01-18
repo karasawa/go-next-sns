@@ -1,20 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import { useSendChat } from '../../hooks/useSendChat'
+import useStore from '../../store/index'
 
 export const ChatBox = () => {
+  const [message, setMessage] = useState('')
+  const user = useStore((state) => state.user)
+  const sendAction = useStore((state) => state.sendAction)
+  const updateSendAction = useStore((state) => state.updateSendAction)
+  const tweet = async () => {
+    const { sendChat } = await useSendChat(user.username, message)
+    await sendChat()
+    await updateSendAction(sendAction)
+  }
   return (
     <Wrapper>
-      <h3>最近の出来事を共有しよう！</h3>
+      <HeaderWrapper>
+        <H2>最新ツイート</H2>
+      </HeaderWrapper>
       <FormWrapper>
-        <Input />
-        <Button>送信</Button>
+        <InputWrapper>
+          <AccountCircleIcon sx={{ fontSize: '40px' }} />
+          <Input
+            placeholder="今どうしてる？"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+        </InputWrapper>
+        <Button onClick={tweet}>ツイートする</Button>
       </FormWrapper>
+      <BorderWrapper></BorderWrapper>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  border: black 1px solid;
+  position: relative;
+  border: #cec5f0 1px solid;
+  border-top: none;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30%;
+  width: 100%;
+`
+const HeaderWrapper = styled.div`
+  border: #cec5f0 1px solid;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20%;
+  width: 100%;
+`
+const H2 = styled.h2`
+  margin: 0;
+`
+const FormWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,19 +68,19 @@ const Wrapper = styled.div`
   height: 50%;
   width: 100%;
 `
-const FormWrapper = styled.div`
+const InputWrapper = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: end;
-  height: 50%;
+  justify-content: center;
   width: 100%;
 `
 const Input = styled.input`
-  padding: 20px;
-  margin-bottom: 10px;
+  padding: 10px;
   width: 70%;
-  border-radius: 10px;
+  height: 45%;
+  border: none;
+  font-size: 20px;
+  outline: none;
 `
 const Button = styled.button`
   padding: 10px;
@@ -46,4 +92,11 @@ const Button = styled.button`
   margin: 0 0 0 auto;
   margin-right: 30px;
   cursor: pointer;
+`
+const BorderWrapper = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #cec5f0;
 `

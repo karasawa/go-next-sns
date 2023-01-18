@@ -34,5 +34,5 @@ const ChatWrapper = styled.div`
   justify-content: space-around;
   flex: 33%;
   height: ;
-  height: 80vh;
+  height: 88vh;
 `
