@@ -9,13 +9,11 @@ export const ChatList = () => {
   const sendAction = useStore((state) => state.sendAction)
   const [chats, setChats] = useState<any>([])
   const { getChats } = useGetChats(setChats)
-  //   const { data, error, isLoading } = useSWR('chats', getChats, {
-  //     refreshInterval: 7000,
-  //   })
-  //   console.log(data)
+  const { data, error, isLoading } = useSWR('chats', getChats, {
+    refreshInterval: 7000,
+  })
   useEffect(() => {
     getChats()
-    // console.log(chats)
   }, [sendAction])
   return (
     <>
@@ -29,13 +27,12 @@ export const ChatList = () => {
 }
 
 const Wrapper = styled.div`
-  position: relative;
   border: #cec5f0 1px solid;
   border-top: none;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: start;
   height: 70%;
   width: 100%;
   overflow: scroll;

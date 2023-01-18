@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center
   border: #cec5f0 1px solid;
-//   min-height: 130px;
+  min-height: 130px;
   width: 100%;
 `
 const UserWrapper = styled.div`

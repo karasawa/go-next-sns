@@ -12,6 +12,7 @@ export const ChatBox = () => {
   const tweet = async () => {
     const { sendChat } = await useSendChat(user.username, message)
     await sendChat()
+    await setMessage('')
     await updateSendAction(sendAction)
   }
   return (

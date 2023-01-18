@@ -1,4 +1,5 @@
 import Cookie from 'universal-cookie'
+import { useSortChats } from '../hooks/useSortChats'
 
 const cookie = new Cookie()
 
@@ -20,6 +21,7 @@ export const useGetChats = (setChats) => {
       })
       .then((data) => {
         console.log(data.chats)
+        useSortChats(data.chats)
         setChats(data.chats)
       })
   }

@@ -3,6 +3,7 @@ import { useAuth } from '../../hooks/useAuth'
 import { useRouter } from 'next/router'
 import Cookie from 'universal-cookie'
 import useStore from '../../store/index'
+import styled from 'styled-components'
 
 const cookie = new Cookie()
 
@@ -30,38 +31,69 @@ export const AuthForm = () => {
     }
   }
 
-  const clickHandle = async () => {
-    await fetch(new URL(`${process.env.NEXT_PUBLIC_API_URL}/secured/ping`), {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: cookie.get('access_token'),
-      },
-    })
-      .then((res) => res.json())
-      .catch((err) => {
-        console.log(err)
-      })
-      .then((data) => console.log(data))
-  }
-
   return (
-    <div>
-      <input
-        type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={auth}>{isSignIn ? 'ログイン' : '新規登録'}</button>
-      <h5 className="text-4xl" onClick={() => setIsSignIn(!isSignIn)}>
-        {isSignIn ? 'アカウントを新規登録する' : 'ログイン画面へ戻る'}
-      </h5>
-      <button onClick={clickHandle}>ping</button>
-    </div>
+    <Wrapper>
+      <FormWrapper>
+        <label htmlFor="email">メールアドレス</label>
+        <Input
+          type="text"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <label htmlFor="password" style={{ marginTop: '10px' }}>
+          パスワード
+        </label>
+        <Input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button onClick={auth}>{isSignIn ? 'ログイン' : '新規登録'}</Button>
+        <H5 onClick={() => setIsSignIn(!isSignIn)}>
+          {isSignIn ? 'アカウントを新規登録する' : 'ログイン画面へ戻る'}
+        </H5>
+      </FormWrapper>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const FormWrapper = styled.div`
+  padding: 40px 20px;
+  width: 25%;
+  border: #cec5f0 1px solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+const Button = styled.button`
+  margin-top: 30px;
+  padding: 10px;
+  width: 110px;
+  background-color: #582b63;
+  color: white;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+`
+const H5 = styled.h5`
+  color: #cec5f0;
+  cursor: pointer;
+`
+const Input = styled.input`
+  padding: 7px;
+  width: 80%;
+  margin: 7px 0;
+  border-color: #cec5f0;
+  border-radius: 7px;
+  outline: none;
+`
