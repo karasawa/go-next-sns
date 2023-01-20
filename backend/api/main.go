@@ -1,13 +1,14 @@
 package main
 
 import (
-	"os"
 	"io"
+	"os"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/karasawa/go-next-sns.git/models"
 	"github.com/karasawa/go-next-sns.git/controllers"
 	"github.com/karasawa/go-next-sns.git/middlewares"
+	"github.com/karasawa/go-next-sns.git/models"
 )
 
 func init() {
@@ -52,6 +53,7 @@ func initRouter() *gin.Engine {
 		{
 			secured.GET("/ping", controllers.Ping)
 			secured.POST("/chat/create", controllers.SendChat)
+			secured.POST("/chat/delete/:ID", controllers.DeleteChat)
 			secured.GET("/chat/get/messages", controllers.GetChats)
 		}
 	}

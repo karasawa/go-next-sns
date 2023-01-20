@@ -4,6 +4,7 @@ import { useGetChats } from '../../hooks/useGetChats'
 import useSWR from 'swr'
 import useStore from '../../store'
 import { ChatCard } from '../molecules/ChatCard'
+import { Chat } from '../../types/index'
 
 export const ChatList = () => {
   const sendAction = useStore((state) => state.sendAction)
@@ -18,7 +19,7 @@ export const ChatList = () => {
   return (
     <>
       <Wrapper className="chat_list">
-        {chats.map((chat) => (
+        {chats.map((chat: Chat) => (
           <ChatCard key={chat.ID} chat={chat} />
         ))}
       </Wrapper>

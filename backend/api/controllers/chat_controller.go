@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+
 	"github.com/gin-gonic/gin"
 	"github.com/karasawa/go-next-sns.git/models"
 )
@@ -43,5 +44,22 @@ func GetChats(ctx *gin.Context) {
 
 	ctx.JSON(http.StatusOK, gin.H{
 		"chats": chats,
+	})
+}
+
+func DeleteChat(ctx *gin.Context) {
+	db := models.DbInit()
+
+	chat := models.Chat{}
+	id := ctx.Param("ID")
+	result := db.Where("id = ?", id).Delete(&chat)
+	if result.Error != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": result.Error})
+		ctx.Abort()
+		return
+	}
+
+	ctx.JSON(http.StatusOK, gin.H{
+		"chat": chat,
 	})
 }

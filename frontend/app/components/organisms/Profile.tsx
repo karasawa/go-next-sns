@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Information = () => {
-  return <Wrapper>Information</Wrapper>
+export const MyProfile = () => {
+  return <Wrapper>Profile</Wrapper>
 }
 
 const Wrapper = styled.div`
+  border: #cec5f0 1px solid;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  flex: 20%;
-  height: 80vh;
+  height: 100%;
 `
