@@ -2,8 +2,9 @@ package models
 
 import (
 	"log"
-	"gorm.io/gorm"
+
 	"golang.org/x/crypto/bcrypt"
+	"gorm.io/gorm"
 )
 
 type User struct {

@@ -18,7 +18,7 @@ export const ChatBox = () => {
   return (
     <Wrapper>
       <HeaderWrapper>
-        <H2>最新ツイート</H2>
+        <H2>最新ノチート</H2>
       </HeaderWrapper>
       <FormWrapper>
         <InputWrapper>
@@ -29,7 +29,7 @@ export const ChatBox = () => {
             onChange={(e) => setMessage(e.target.value)}
           />
         </InputWrapper>
-        <Button onClick={tweet}>ツイートする</Button>
+        <Button onClick={tweet}>ノチートする</Button>
       </FormWrapper>
       <BorderWrapper></BorderWrapper>
     </Wrapper>

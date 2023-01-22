@@ -22,8 +22,8 @@ export const AuthForm = () => {
     if (isSignIn) {
       await signin()
       if (cookie.get('access_token') !== 'undefined') {
-        updateUser({ ...user, username: email })
-        router.push('/home')
+        await updateUser({ ...user, username: email })
+        await router.push('/home')
       }
     } else {
       await signup()

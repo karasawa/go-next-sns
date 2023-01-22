@@ -51,10 +51,12 @@ func initRouter() *gin.Engine {
 		api.POST("/user/signup", controllers.SignUp)
 		secured := api.Group("/secured").Use(middlewares.Auth())
 		{
-			secured.GET("/ping", controllers.Ping)
 			secured.POST("/chat/create", controllers.SendChat)
 			secured.POST("/chat/delete/:ID", controllers.DeleteChat)
 			secured.GET("/chat/get/messages", controllers.GetChats)
+			secured.POST("/chat/get/my/messages", controllers.GetMyChats)
+			secured.POST("/profile", controllers.GetMyProfile)
+			secured.POST("/upload", controllers.Upload)
 		}
 	}
 	return r

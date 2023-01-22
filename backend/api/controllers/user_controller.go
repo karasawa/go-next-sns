@@ -1,14 +1,16 @@
 package controllers
 
 import (
-	"net/http"
-	"log"
 	"errors"
 	"fmt"
+	"log"
+	"net/http"
+
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
 	"github.com/karasawa/go-next-sns.git/models"
+	"gorm.io/gorm"
 )
+
 
 func SignUp(ctx *gin.Context) {
 	db := models.DbInit()
@@ -59,13 +61,33 @@ func SignIn(ctx *gin.Context) {
 	})
 }
 
-func User(ctx *gin.Context) {
-	head := ctx.Request.Header["Authrization"]
+func GetMyProfile(ctx *gin.Context) {
+	db := models.DbInit()
+
+	user := models.User{}
+	if err := ctx.ShouldBindJSON(&user); err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err})
+		ctx.Abort()
+		return
+	}
+
+	result := db.Where("Email = ?", user.Email).Find(&user)
+	if result.Error != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": result.Error})
+		ctx.Abort()
+		return
+	}
+
 	ctx.JSON(http.StatusOK, gin.H{
-		"head": head,
+		"user": user, 
 	})
 }
 
-func Ping(context *gin.Context) {
-	context.JSON(http.StatusOK, gin.H{"message": "pong"})
+func Upload(ctx *gin.Context) {
+	form, _ := ctx.MultipartForm()
+	imageFile := form.File["imageFile"]
+
+	ctx.JSON(http.StatusOK, gin.H{
+		"imageFile": imageFile,
+	})
 }

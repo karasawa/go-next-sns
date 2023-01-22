@@ -1,5 +1,6 @@
 export type User = {
   username: string
+  CreatedAt: string
 }
 
 export type Chat = {

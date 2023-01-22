@@ -10,9 +10,10 @@ type State = {
 }
 
 const useStore = create<State>((set) => ({
-  user: { username: '' },
-  updateUser: (payload) => set({ user: { username: payload.username } }),
-  resetUser: () => set({ user: { username: '' } }),
+  user: { username: '', CreatedAt: '' },
+  updateUser: (payload) =>
+    set({ user: { username: payload.username, CreatedAt: payload.CreatedAt } }),
+  resetUser: () => set({ user: { username: '', CreatedAt: '' } }),
   sendAction: true,
   updateSendAction: (payload) => set({ sendAction: !payload }),
 }))

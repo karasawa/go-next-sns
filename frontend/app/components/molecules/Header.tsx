@@ -25,7 +25,8 @@ const Wrapper = styled.div`
 `
 const UsernameWrapper = styled.div`
   min-width: 80px;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 600;
 `
 const H3 = styled.h3`
   font-size: 20px;

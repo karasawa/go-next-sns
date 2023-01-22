@@ -7,6 +7,9 @@ import (
 	"github.com/karasawa/go-next-sns.git/models"
 )
 
+type UsernameRequest struct {
+	Username string `json:"username"`
+}
 
 func SendChat(ctx *gin.Context) {
 	db := models.DbInit()
@@ -36,6 +39,30 @@ func GetChats(ctx *gin.Context) {
 
 	chats := []models.Chat{}
 	result := db.Find(&chats)
+	if result.Error != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": result.Error})
+		ctx.Abort()
+		return
+	}
+
+	ctx.JSON(http.StatusOK, gin.H{
+		"chats": chats,
+	})
+}
+
+func GetMyChats(ctx *gin.Context) {
+	db := models.DbInit()
+
+	chats := []models.Chat{}
+	user := UsernameRequest{}
+
+	if err := ctx.ShouldBindJSON(&user); err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": err})
+		ctx.Abort()
+		return
+	}
+
+	result := db.Where("username = ?", user.Username).Find(&chats)
 	if result.Error != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": result.Error})
 		ctx.Abort()

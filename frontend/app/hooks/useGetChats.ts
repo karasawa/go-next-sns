@@ -3,7 +3,7 @@ import { useSortChats } from '../hooks/useSortChats'
 
 const cookie = new Cookie()
 
-export const useGetChats = (setChats) => {
+export const useGetChats = (setChats: any) => {
   const getChats = async () => {
     await fetch(
       new URL(`${process.env.NEXT_PUBLIC_API_URL}/secured/chat/get/messages`),
@@ -20,7 +20,7 @@ export const useGetChats = (setChats) => {
         throw new Error(err)
       })
       .then((data) => {
-        console.log(data.chats)
+        console.log(data)
         useSortChats(data.chats)
         setChats(data.chats)
       })

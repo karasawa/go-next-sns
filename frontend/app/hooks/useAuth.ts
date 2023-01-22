@@ -1,4 +1,5 @@
 import Cookie from 'universal-cookie'
+import { format } from 'date-fns'
 
 const cookie = new Cookie()
 
@@ -29,7 +30,7 @@ export const useAuth = (email: string, password: string) => {
       .catch((err) => {
         throw new Error(err)
       })
-      .then((data) => {
+      .then((data: any) => {
         console.log(data)
         const options = { path: '/' }
         cookie.set('access_token', data.token, options)

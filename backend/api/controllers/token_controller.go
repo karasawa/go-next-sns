@@ -1,10 +1,11 @@
 package controllers
 
 import (
+	"net/http"
+
+	"github.com/gin-gonic/gin"
 	"github.com/karasawa/go-next-sns.git/jwt"
 	"github.com/karasawa/go-next-sns.git/models"
-	"net/http"
-	"github.com/gin-gonic/gin"
 )
 
 type TokenRequest struct {
@@ -42,5 +43,5 @@ func GenerateToken(ctx *gin.Context) {
 		ctx.Abort()
 		return
 	}
-	ctx.JSON(http.StatusOK, gin.H{"token": tokenString})
+	ctx.JSON(http.StatusOK, gin.H{"token": tokenString, "user": user})
 }
